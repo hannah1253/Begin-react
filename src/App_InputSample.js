@@ -1,6 +1,9 @@
 import React from 'react';
+
+
 import './App.css';
-import UserList from './UserList';
+
+import InputSample from './InputSample';
 
 function App() {
   const name = 'react';
@@ -13,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <>
-      <UserList/>
+      <InputSample/>
       </>
      
     </div>

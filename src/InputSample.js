@@ -1,10 +1,11 @@
-import React ,{useState} from "react";
+import React ,{ useState, useRef } from "react";
 
 function InputSample(){
     const [inputs, setInputs]= useState({
         name: '',
         nickname: ''
     });
+    const nameInput = useRef();
     const {name, nickname}=inputs;
 
     const onChange=(e)=>{
@@ -18,11 +19,12 @@ function InputSample(){
        //객체상태를 업데이트할땐  한번 겍체를 복사하고 나서 덮어써서 상태를 업뎃해야한당!!! 
        setInputs(nextInputs);
     }
-    const onReset=(e)=>{
+    const onReset=()=>{
         setInputs({
             name:'',
             nickname:''
         });
+        nameInput.current.focus();
     }
     return(
         <div>
@@ -32,6 +34,7 @@ function InputSample(){
                 placeholder="이름" 
                 onChange={onChange} 
                 value={name}
+                ref={nameInput}
             />
            <input 
                 name="nickname" 
