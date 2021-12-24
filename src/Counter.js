@@ -1,16 +1,32 @@
-import React ,{useState}from "react";
+import React ,{ useReducer }from "react";
+
+
+//reducer 함수는  첫번째 파라미터 state 두번째 파라미터 action
+// 결과값은 그 다음 형태! 
+function reducer(state, action){
+    switch (action.type) {
+        case 'INCREMENT':
+            return state + 1;
+        case 'DECREMENT':
+            return state - 1;
+        default:
+            throw new Error('unhandled action');
+    }
+}
 
 function Counter(){
-    const [number, setNumber]= useState(0);
-    // 첫번째 원소는 현재상태 두번쨰 원소는 현재상태를 바꾸는 함수. 
-    // useState(이안에 들어갈 값은 초기값)
+
+    const [number , dispatch] = useReducer(reducer, 0);
+
     const onIncrease =()=>{
-       // setNumber(number+1);
-       setNumber(prevNumber => prevNumber+1);
-       //업데이트 할 로직을 함수로 구현할수 있음 ==> 최적화랑 관련이있음
+       dispatch({
+           type : 'INCREMENT'
+       })
     }
     const onDecrease =()=>{
-        setNumber(number-1);
+        dispatch({
+            type : 'DECREMENT'
+        })
     }
     return(
         <di>
