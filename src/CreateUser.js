@@ -15,7 +15,7 @@ function CreateUesr({ username, email, onChange, onCreate }) {
         onChange={onChange}
         value={email}
       />
-      <button onClick={onCreate}>등록합니다.</button>
+      <button onClick={onCreate}>등록</button>
     </div>
   );
 }
