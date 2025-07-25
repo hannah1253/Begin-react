@@ -5,7 +5,7 @@ import UserList from "./UserList";
 //useCallback =>  이전에 만들었던 함수를 새로 만들지 않고 재사용 하는 방법! useMemo랑 비슷한데 함수에 사용하는 Hook
 //react devtools 크롬에 확장 설치하면 개발자 도구에
 function countActiveUsers(users) {
-  console.log("활성 사용자 수 새는중...");
+  console.log("활성 사용자 수 새는중...dddd");
   return users.filter((user) => user.active).length;
 }
 

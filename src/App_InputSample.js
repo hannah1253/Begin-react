@@ -10,7 +10,7 @@ function App() {
   const style = {
     backgroundColor : 'black',
     color: 'aqua',
-    fontSize: 24,
+    fontSize: 24, 
     padding : 'lrem'
   }
   return (
