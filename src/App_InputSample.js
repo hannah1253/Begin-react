@@ -1,24 +1,22 @@
-import React from 'react';
+import React from "react";
 
+import "./App.css";
 
-import './App.css';
-
-import InputSample from './InputSample';
+import InputSample from "./InputSample";
 
 function App() {
-  const name = 'react';
+  const name = "react";
   const style = {
-    backgroundColor : 'black',
-    color: 'aqua',
-    fontSize: 24, 
-    padding : 'lrem'
-  }
+    backgroundColor: "black",
+    color: "aqua",
+    fontSize: 24,
+    padding: "lrem",
+  };
   return (
     <div className="App">
       <>
-      <InputSample/>
+        <InputSample />
       </>
-     
     </div>
   );
 }

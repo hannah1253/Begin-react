@@ -1,22 +1,22 @@
-import React from 'react';
+import React from "react";
 import Hello from "./hello";
 
-import './App.css';
-import Wrapper from './Wrapper';
-import Counter from './Counter';
+import "./App.css";
+import Wrapper from "./Wrapper";
+import Counter from "./Counter";
 
 function App() {
-  const name = 'react';
+  const name = "react";
   const style = {
-    backgroundColor : 'black',
-    color: 'aqua',
+    backgroundColor: "black",
+    color: "aqua",
     fontSize: 24,
-    padding : 'lrem'
-  }
+    padding: "lrem",
+  };
   return (
     <div className="App">
       <>
-      <Counter/>
+        <Counter />
         {/*주석은 이렇게
         <Wrapper>
         

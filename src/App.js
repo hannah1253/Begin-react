@@ -26,7 +26,7 @@ function App() {
         [name]: value,
       });
     },
-    [inputs]
+    [inputs],
   );
 
   const onRemove = useCallback((id) => {
@@ -80,8 +80,8 @@ function App() {
     // 불변성을 지키면서 배열을 업데이트 할때에도 자바스크립트 내장함수 map 사용 가능
     setUsers((users) =>
       users.map((user) =>
-        user.id === id ? { ...user, active: !user.active } : user
-      )
+        user.id === id ? { ...user, active: !user.active } : user,
+      ),
     );
   }, []);
 
